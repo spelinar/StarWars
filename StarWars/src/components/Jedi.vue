@@ -1,45 +1,20 @@
 <template>
-  <v-card
-    class="mx-auto"
-    max-width="344"
-    variant="outlined"
-  >
-    <div v-for="peopleData in jediPeople" :key="peopleData.name">{{peopleData.name}}</div>
+  <v-container>
+    <v-card-text>
+    <h1 class="justify-center d-flex text-h1">CHARAKTERS</h1>
+    </v-card-text>
+  <div class="justify-center d-flex">
     <v-card-item>
-      <div>
-        <div class="text-overline mb-1">
-        </div>
-        <div class="text-overline mb-1">
-          OVERLINE
-        </div>
-        <div class="text-h6 mb-1">
-          Headline
-        </div>
-        <div class="text-caption">Greyhound divisely hello coldly fonwderfully</div>
-      </div>
+      <a><v-list class=" text-h4" v-for="peopleData in jediPeople" :key="peopleData.name">{{peopleData.name}}</v-list></a>
     </v-card-item>
-
-    <v-card-actions>
-      <v-btn variant="outlined">
-        Button
-      </v-btn>
-    </v-card-actions>
-  </v-card>
+  </div>
+  </v-container>
 </template>
 
 <script lang="ts" setup>
 
-import {onMounted, ref} from "vue";
-import axios, {create} from "axios";
-import {people} from "@/types/peopleType";
+defineProps<{jediPeople: string}>()
 
-const jediPeople = ref([])
-
-onMounted(async () => {
-  const  response = await axios.get('https://swapi.dev/api/people')
-  jediPeople.value = response.data.results
-})
-console.log(jediPeople)
 </script>
 
 <style scoped>
