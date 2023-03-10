@@ -17,3 +17,19 @@ export interface people {
   vehicles: string
 
 }
+
+export interface filmJedi {
+  characters?: string[];
+  created?: string;
+  edited?: string;
+  episode_id?: number;
+  opening_crawl?: string;
+  planets?: string[];
+  producer?: string;
+  rease_date?: string;
+  species?: string[];
+  starships?: string[];
+  title?: string;
+  url?: string;
+  vehicles?: string[];
+}
