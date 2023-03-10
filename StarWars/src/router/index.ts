@@ -10,6 +10,11 @@ const routes = [
         path: '/jedi',
         name: 'Jedi',
         component: () => import('@/views/JediView.vue')
+      },
+      {
+        path: '/films',
+        name: 'Films',
+        component: () => import('@/views/FilmsView.vue')
       }
     ],
   },
