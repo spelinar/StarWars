@@ -5,7 +5,8 @@ import {ref} from "vue";
 export const usePeopleStore = defineStore('people',() => {
   const people = ref([])
   async function jediData() {
-    const response = await axios.get('https://swapi.dev/api/people')
+    // const id = this.$route.params.id
+    const response = await axios.get(`https://swapi.dev/api/people`)
     people.value = response.data.results
   }
   jediData()
