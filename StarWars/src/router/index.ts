@@ -7,13 +7,13 @@ const routes = [
     component: () => import('@/layouts/JediAppBar.vue'),
     children: [
       {
-        path: '/people',
-        name: 'people',
+        path: '/',
+        name: 'characters',
         component: () => import('@/views/jediPeople/JediView.vue')
       },
       {
-        path: '/people',
-        name: 'peopleId',
+        path: '/characters/:id',
+        name: 'charactersId',
         component: () => import('@/views/jediPeople/JediDetailsView.vue')
       },
       {

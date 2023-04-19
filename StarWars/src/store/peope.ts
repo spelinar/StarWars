@@ -1,14 +1,16 @@
 import {defineStore} from "pinia";
 import axios from 'axios'
 import {ref} from "vue";
+import {PeopleState} from "@/types/Type";
 
 export const usePeopleStore = defineStore('people',() => {
-  const people = ref([])
+  const people = ref<PeopleState>({})
   async function jediData() {
     // const id = this.$route.params.id
     const response = await axios.get(`https://swapi.dev/api/people`)
     people.value = response.data.results
   }
+
   jediData()
   return {people}
 })

@@ -33,3 +33,7 @@ export interface filmJedi {
   url?: string;
   vehicles?: string[];
 }
+
+export interface PeopleState {
+  [key: string]: people
+}
