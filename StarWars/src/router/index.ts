@@ -7,15 +7,20 @@ const routes = [
     component: () => import('@/layouts/JediAppBar.vue'),
     children: [
       {
-        path: '/jedi',
-        name: 'Jedi',
-        component: () => import('@/views/JediView.vue')
+        path: '/people',
+        name: 'people',
+        component: () => import('@/views/jediPeople/JediView.vue')
       },
       {
-        path: '/films',
+        path: '/people',
+        name: 'peopleId',
+        component: () => import('@/views/jediPeople/JediDetailsView.vue')
+      },
+      {
+        path: '/films/:id',
         name: 'Films',
-        component: () => import('@/views/FilmsView.vue')
-      }
+        component: () => import('@/views/jediFilms/FilmsView.vue')
+      },
     ],
   },
 ]
