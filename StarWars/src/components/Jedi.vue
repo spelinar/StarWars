@@ -14,14 +14,7 @@
 
 <script lang="ts" setup>
 import {usePeopleStore} from "@/store/peope";
-import router from "@/router";
 const people = usePeopleStore()
-defineProps<{jediPeople: string}>()
-
-const goToDetails = (id: string) => {
-  console.log('test', id)
-  router.push(`/people/${id}`)
-}
 
 </script>
 

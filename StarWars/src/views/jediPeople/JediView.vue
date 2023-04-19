@@ -1,11 +1,11 @@
 <template>
-    <Jedi :jediPeople="jediPeople"/>
+    <Jedi />
 </template>
 
 <script lang="ts" setup>
 import Jedi from "@/components/Jedi.vue";
 import {onMounted, ref} from "vue";
-import axios, {create} from "axios";
+import axios from "axios";
 
 const jediPeople = ref([])
 

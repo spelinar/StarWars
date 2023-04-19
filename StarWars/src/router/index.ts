@@ -12,7 +12,7 @@ const routes = [
         component: () => import('@/views/jediPeople/JediView.vue')
       },
       {
-        path: '/people/:id',
+        path: '/people',
         name: 'peopleId',
         component: () => import('@/views/jediPeople/JediDetailsView.vue')
       },
