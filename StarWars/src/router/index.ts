@@ -9,17 +9,12 @@ const routes = [
       {
         path: '/',
         name: 'characters',
-        component: () => import('@/views/jediPeople/JediView.vue')
+        component: () => import('@/views/CharactersView/CharactersView.vue')
       },
       {
         path: '/characters/:id',
-        name: 'charactersId',
-        component: () => import('@/views/jediPeople/JediDetailsView.vue')
-      },
-      {
-        path: '/films/:id',
-        name: 'Films',
-        component: () => import('@/views/jediFilms/FilmsView.vue')
+        name: 'character',
+        component: () => import('@/views/CharactersView/CharactersDetails.vue')
       },
     ],
   },

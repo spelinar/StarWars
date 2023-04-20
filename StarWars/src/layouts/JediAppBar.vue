@@ -33,7 +33,7 @@
 import router from "@/router";
 
 function goToCharacters() {
-  router.push({path: 'details'})
+  router.push({path: '/characters'})
 }
 
 </script>
