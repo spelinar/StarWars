@@ -13,7 +13,6 @@ export const usePeopleStore = defineStore('people',() => {
   return {people}
 })
 
-
 export const useSwapiFilmsStore = defineStore('films', () =>{
   const films = ref([])
 
